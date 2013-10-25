@@ -218,3 +218,69 @@ ActionView::TemplateError (undefined method `items' for #<Catalog id: nil, creat
 Rendered rescues/_trace (76.7ms)
 Rendered rescues/_request_and_response (1.5ms)
 Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateItems (20131025172856)
+Migrating to CreateCatalogs (20131025172919)
+Migrating to CreateCarts (20131025173455)
+Migrating to CreateOrders (20131025173507)
+Migrating to CreateInventories (20131025173517)
+Migrating to AddCatalogToItems (20131025182912)
+  [4;35;1mSQL (111.2ms)[0m   [0mALTER TABLE `items` ADD `catalog_id` int(11)[0m
+  [4;36;1mSQL (7.8ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20131025182912')[0m
+Migrating to AddNameToCatalog (20131025183012)
+  [4;35;1mSQL (56.6ms)[0m   [0mALTER TABLE `catalogs` ADD `name` varchar(255)[0m
+  [4;36;1mSQL (7.9ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20131025183012')[0m
+Migrating to RemoveHasManyFromCatalog (20131025183058)
+  [4;35;1mSQL (0.0ms)[0m   [0mMysql::Error: Can't DROP 'has_many'; check that column/key exists: ALTER TABLE `catalogs` DROP `has_many`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateItems (20131025172856)
+Migrating to CreateCatalogs (20131025172919)
+Migrating to CreateCarts (20131025173455)
+Migrating to CreateOrders (20131025173507)
+Migrating to CreateInventories (20131025173517)
+Migrating to AddCatalogToItems (20131025182912)
+Migrating to AddNameToCatalog (20131025183012)
+Migrating to RemoveHasManyFromCatalog (20131025183058)
+  [4;35;1mSQL (0.0ms)[0m   [0mMysql::Error: Can't DROP 'has_many'; check that column/key exists: ALTER TABLE `catalogs` DROP `has_many`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mCatalog Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `catalogs`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCatalog Create (0.4ms)[0m   [0mINSERT INTO `catalogs` (`created_at`, `name`, `updated_at`) VALUES('2013-10-25 18:38:16', 'CDs', '2013-10-25 18:38:16')[0m
+  [4;36;1mSQL (21.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mItem Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mItem Create (0.3ms)[0m   [0mINSERT INTO `items` (`description`, `created_at`, `catalog_id`, `name`, `updated_at`) VALUES('Christmas by Buble', '2013-10-25 18:39:21', NULL, 'Christmas', '2013-10-25 18:39:21')[0m
+  [4;36;1mSQL (25.1ms)[0m   [0;1mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mCatalog Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `catalogs`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCatalog Create (0.3ms)[0m   [0mINSERT INTO `catalogs` (`name`, `updated_at`, `created_at`) VALUES('CDs', '2013-10-25 18:46:06', '2013-10-25 18:46:06')[0m
+  [4;36;1mSQL (20.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mItem Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mItem Create (0.3ms)[0m   [0mINSERT INTO `items` (`description`, `name`, `updated_at`, `created_at`, `catalog_id`) VALUES('Christmas by Buble', 'Christmas', '2013-10-25 18:46:32', '2013-10-25 18:46:32', NULL)[0m
+  [4;36;1mSQL (29.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mItem Update (0.4ms)[0m   [0;1mUPDATE `items` SET `catalog_id` = 2, `updated_at` = '2013-10-25 18:46:42' WHERE `id` = 3[0m
+  [4;35;1mSQL (16.2ms)[0m   [0mCOMMIT[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2013-10-25 14:47:40) [GET]
+  [4;36;1mItem Load (0.5ms)[0m   [0;1mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+Completed in 36ms (View: 32, DB: 71) | 200 OK [http://www.example.com/items/
+]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2013-10-25 14:47:48) [GET]
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;35;1mItem Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+Completed in 45ms (View: 30, DB: 2) | 200 OK [http://www.example.com/items/]
