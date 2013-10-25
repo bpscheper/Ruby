@@ -1,0 +1,72 @@
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateItems (20131025172856)
+  [4;35;1mSQL (0.0ms)[0m   [0mMysql::Error: Table 'items' already exists: CREATE TABLE `items` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateItems (20131025172856)
+  [4;35;1mSQL (0.0ms)[0m   [0mMysql::Error: Table 'items' already exists: CREATE TABLE `items` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateItems (20131025172856)
+  [4;35;1mSQL (56.8ms)[0m   [0mCREATE TABLE `items` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (7.9ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20131025172856')[0m
+Migrating to CreateCatalogs (20131025172919)
+  [4;35;1mSQL (0.0ms)[0m   [0mMysql::Error: Table 'catalogs' already exists: CREATE TABLE `catalogs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateItems (20131025172856)
+Migrating to CreateCatalogs (20131025172919)
+  [4;35;1mSQL (39.6ms)[0m   [0mCREATE TABLE `catalogs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (7.7ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20131025172919')[0m
+Migrating to CreateCarts (20131025173455)
+  [4;35;1mSQL (30.9ms)[0m   [0mCREATE TABLE `carts` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (7.8ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20131025173455')[0m
+Migrating to CreateOrders (20131025173507)
+  [4;35;1mSQL (0.0ms)[0m   [0mMysql::Error: Table 'orders' already exists: CREATE TABLE `orders` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `status` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateItems (20131025172856)
+Migrating to CreateCatalogs (20131025172919)
+Migrating to CreateCarts (20131025173455)
+Migrating to CreateOrders (20131025173507)
+  [4;35;1mSQL (67.1ms)[0m   [0mCREATE TABLE `orders` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `status` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (7.9ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20131025173507')[0m
+Migrating to CreateInventories (20131025173517)
+  [4;35;1mSQL (0.0ms)[0m   [0mMysql::Error: Table 'inventories' already exists: CREATE TABLE `inventories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateItems (20131025172856)
+Migrating to CreateCatalogs (20131025172919)
+Migrating to CreateCarts (20131025173455)
+Migrating to CreateOrders (20131025173507)
+Migrating to CreateInventories (20131025173517)
+  [4;35;1mSQL (39.0ms)[0m   [0mCREATE TABLE `inventories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (7.9ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20131025173517')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `Company`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mdescribe `Company`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `Company`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW FIELDS FROM `carts`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `carts`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `carts`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `catalogs`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mdescribe `catalogs`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `catalogs`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW FIELDS FROM `inventories`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `inventories`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `inventories`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `items`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `items`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mdescribe `orders`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `orders`[0m

@@ -1,8 +1,11 @@
 # SQLite version 3.x
 #   gem install sqlite3-ruby (not necessary on OS X Leopard)
 development:
-  adapter: sqlite3
-  database: db/development.sqlite3
+  adapter: mysql
+  host: mysql.cs.uky.edu
+  database: bpsc222
+  username: bpsc222
+  password: u0712429
   pool: 5
   timeout: 5000
 
