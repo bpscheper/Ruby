@@ -1,0 +1,13 @@
+<p>
+  <b>User:</b>
+  <%=h @cart.user %>
+</p>
+
+<p>
+  <b>Items:</b>
+  <%=h @cart.items %>
+</p>
+
+
+<%= link_to 'Edit', edit_cart_path(@cart) %> |
+<%= link_to 'Back', carts_path %>

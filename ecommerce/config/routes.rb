@@ -1,4 +1,10 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :inventories
+
+  map.resources :orders
+
+  map.resources :carts
+
   map.resources :catalogs
 
   map.resources :items
